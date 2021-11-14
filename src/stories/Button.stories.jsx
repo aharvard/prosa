@@ -7,7 +7,6 @@ export default {
   parameters: {
     layout: 'centered',
   },
-
   argTypes: { onClick: { action: 'clicked' } },
 }
 
@@ -23,3 +22,5 @@ export const Secondary = Template.bind({})
 Secondary.args = {
   label: 'Button',
 }
+
+export const ButtonWithIcon = () => <Button label="icon btn" icon="add" />

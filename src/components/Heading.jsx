@@ -4,7 +4,10 @@ import PropTypes from 'prop-types'
 export default function Heading({ level, text, className, ...props }) {
   const HeadingTag = `h${level}`
   return (
-    <HeadingTag className={['text-2xl', className].join(' ')} {...props}>
+    <HeadingTag
+      className={['text-2xl font-bold', className].join(' ')}
+      {...props}
+    >
       {text}
     </HeadingTag>
   )

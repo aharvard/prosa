@@ -1,31 +1,32 @@
-import "tailwindcss/tailwind.css";
-import { Container } from "./components/Container";
-import { Header } from "./components/Header";
-import { MyTemplates } from "./components/MyTemplates";
+import React from 'react'
+import 'tailwindcss/tailwind.css'
+import { Container } from './components/Container'
+import { Header } from './components/Header'
+import { MyTemplates } from './components/MyTemplates'
 
 const data = {
   user: {
     id: 1,
     templates: [
-      { title: "Structure an Argument", createdDate: 10, updatedDate: 24 },
-      { title: "Email Your Advisor", createdDate: 14, updatedDate: 29 },
-      { title: "Book Report", createdDate: 19, updatedDate: 44 },
+      { title: 'Structure an Argument', createdDate: 10, updatedDate: 24 },
+      { title: 'Email Your Advisor', createdDate: 14, updatedDate: 29 },
+      { title: 'Book Report', createdDate: 19, updatedDate: 44 },
     ],
   },
-};
+}
 
 function App() {
   return (
     <div className="App">
       <Header
         user={data.user}
-        onLogin={() => console.log("Log In")}
-        onLogout={() => console.log("Log Out")}
-        onCreateAccount={() => console.log("Create Account")}
-      ></Header>
+        onLogin={() => console.log('Log In')}
+        onLogout={() => console.log('Log Out')}
+        onCreateAccount={() => console.log('Create Account')}
+      />
 
       <main>
-        <MyTemplates templates={data.user.templates}></MyTemplates>
+        <MyTemplates templates={data.user.templates} />
       </main>
 
       <Container>
@@ -50,8 +51,8 @@ function App() {
               puts women and girls at a disadvantage when they try to entre
               male-dominated fields. Together, this body of research suggests
               that cultural and social causes, not biological causes, are the
-              best explanation for gender disparities in education.{" "}
-            </p>{" "}
+              best explanation for gender disparities in education.{' '}
+            </p>{' '}
             <p>
               To explore this topic further, I plan to conduct a/an interview
               study with 10 men and 10 women students majoring in mechanical
@@ -66,7 +67,7 @@ function App() {
         </article>
       </Container>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

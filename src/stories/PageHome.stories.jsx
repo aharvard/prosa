@@ -6,7 +6,7 @@ import CtaStack from '../components/CtaStack'
 import Footer from '../components/Footer'
 
 export default {
-  title: 'Page/Home',
+  title: 'Marketing/Home',
 }
 
 const Template = () => (
@@ -31,4 +31,4 @@ const Template = () => (
   </Body>
 )
 
-export const HomePage = Template.bind({})
+export const Page = Template.bind({})
