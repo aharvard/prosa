@@ -1,12 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { styled } from '../../stitches.config'
 import Button from './Button'
 import Container from './Container'
 
-export default function Header({ isAuth }) {
+const StyledHeader = styled('header', {
+  fontFamily: '$system',
+  color: '$hiContrast',
+  outline: '1px solid red',
+})
+
+export const Header = ({ isAuth }) => {
+  console.log(Object.entries(theme.colors))
+
   return (
-    <header className="bg-white shadow">
+    <StyledHeader>
       <Container>
+        {/* {JSON.stringify(theme.colors)} */}
+
         <div className="relative flex items-center justify-between h-16">
           <div className="font-bold text-2xl">Prōsa</div>
 
@@ -20,7 +31,7 @@ export default function Header({ isAuth }) {
           )}
         </div>
       </Container>
-    </header>
+    </StyledHeader>
   )
 }
 

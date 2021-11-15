@@ -10,7 +10,6 @@ export default function Button({
   onClick,
   icon,
   hideText,
-  children,
   ...props
 }) {
   const mode = primary
@@ -21,7 +20,7 @@ export default function Button({
     <button
       type="button"
       onClick={onClick}
-      ariaLabel={label}
+      aria-label={label}
       title={label}
       className={[
         'text-base focus:z-10 relative inline-flex items-center font-semibold py-2 px-4 shadow focus:outline-none focus:ring-2 focus:ring-offset-2 ',
@@ -31,7 +30,6 @@ export default function Button({
       ].join(' ')}
       {...props}
     >
-      {children}
       {icon && (
         <Icon name={icon} className={`text-sm h-4 ${!hideText && 'pr-3'}`} />
       )}
@@ -48,7 +46,6 @@ Button.propTypes = {
   className: PropTypes.string,
   hideText: PropTypes.bool,
   rounded: PropTypes.bool,
-  children: PropTypes.element.isRequired,
 }
 
 Button.defaultProps = {
